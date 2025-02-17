@@ -1,7 +1,3 @@
-@TOC (目录测试文档)
-
-[TOC]
-
 - [Test Only](#test-only)
   - [Emoji Test 2](#emoji-test-2)
     - [Title Level 3](#title-level-3)
@@ -28,8 +24,6 @@
       - [API 测试及实际样本测试](#api-测试及实际样本测试)
     - [模糊搜索测试](#模糊搜索测试)
   - [代码高亮测试](#代码高亮测试)
-- [Python](#python)
-- [Ruby](#ruby)
 
 
 # Test Only
@@ -40,10 +34,7 @@
 :bomb:
 😄
 :watermelon:
-:bricks:
-
-
-&#128515;
+:bricks: &#128515;
 
 ### Title Level 3
 ### Title Level 3-2
@@ -134,78 +125,65 @@ flowchart TB
 
 ## 代码高亮测试
 
-​```python
+```python
+import pyautogui
+  # 获取屏幕的大小
+  screen_width, screen_height = pyautogui.size()
 
-    import pyautogui
+  # 捕捉鼠标位置和点击事件的回调函数
+  def on_mouse_event(event):
+      print(event)
 
-    # 获取屏幕的大小
-    screen_width, screen_height = pyautogui.size()
+  # 注册回调函数
+  pyautogui.onMouseEvent = on_mouse_event
 
-    # 捕捉鼠标位置和点击事件的回调函数
-    def on_mouse_event(event):
-        print(event)
+  # 开始捕捉鼠标事件
+  pyautogui.PAUSE = 0.1 # 设置每次捕捉的时间间隔
+  pyautogui.FAILSAFE = True  # 如果鼠标移到屏幕的四个角，将会触发 pyautogui.FailSafeException 异常，可进行异常处理
 
-    # 注册回调函数
-    pyautogui.onMouseEvent = on_mouse_event
+  # 捕捉鼠标事件，直到用户按下键盘上的Ctrl+C来停止程序
+  try:
+      while True:
+          pass
+  except KeyboardInterrupt:
+      pass
+```
 
-    # 开始捕捉鼠标事件
-    pyautogui.PAUSE = 0.1 # 设置每次捕捉的时间间隔
-    pyautogui.FAILSAFE = True  # 如果鼠标移到屏幕的四个角，将会触发 pyautogui.FailSafeException 异常，可进行异常处理
-
-    # 捕捉鼠标事件，直到用户按下键盘上的Ctrl+C来停止程序
-    try:
-        while True:
-            pass
-    except KeyboardInterrupt:
-        pass
-
-​```
-
-
-​```java
-
-    // Java
-    class HelloWorld {
-        public static void main(String[] args) {
-        System.out.println("Hello, world!");
-        }
+```java
+// Java
+class HelloWorld {
+    public static void main(String[] args) {
+    System.out.println("Hello, world!");
     }
+}
+```
 
-​```
 
 ```python
-
 # Python
 print("Hello, world!")
-
-​```
-
-
-​```ruby
-
-# Ruby
-puts "Hello, world!"
-
-​```
+```
 
 
-​```scala
-
-// Scala
-object HelloWorld extends App {
- println("Hello, world!")
-}
-
-​```
+```ruby
+    # Ruby
+    puts "Hello, world!"
+```
 
 
-​```go
+```scala
+    // Scala
+    object HelloWorld extends App {
+    println("Hello, world!")
+    }
+```
 
+
+```go
 // Go
 package main
 import "fmt"
 func main() {
- fmt.Println("Hello, world!")
+fmt.Println("Hello, world!")
 }
-
 ​```
