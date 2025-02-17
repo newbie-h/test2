@@ -1,7 +1,17 @@
 
 # Test Only
 
-## Title Level 2
+
+## Emoji Test 2
+:pill:
+:bomb:
+😄
+:watermelon:
+:bricks:
+
+
+&#128515;
+
 ### Title Level 3
 ### Title Level 3-2
 
