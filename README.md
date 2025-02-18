@@ -5,4 +5,4 @@
 # Python
 print("Hello, world!")
 
-​```
+```

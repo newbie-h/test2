@@ -195,10 +195,10 @@ print("Hello, world!")
 
 
 ```scala
-    // Scala
-    object HelloWorld extends App {
-    println("Hello, world!")
-    }
+// Scala
+object HelloWorld extends App {
+println("Hello, world!")
+}
 ```
 
 
