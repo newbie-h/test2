@@ -23,6 +23,7 @@
       - [免费版网页、App 及桌面端测试](#免费版网页app-及桌面端测试)
       - [API 测试及实际样本测试](#api-测试及实际样本测试)
     - [模糊搜索测试](#模糊搜索测试)
+  - [Mermaid图显示](#mermaid图显示)
   - [代码高亮测试](#代码高亮测试)
 
 
@@ -105,10 +106,11 @@ P(B|A) &= \frac{P(AB)}{P(A)} \\
 P(\overline{B}|A) &= 1 - P(B|A) = 1 - \frac{P(AB)}{P(A)}
 \end{align} $$
 
-
-
 看看公示显示
 
+## Mermaid图显示
+
+- 流程图
 ```mermaid
 flowchart TB
     A["JS"]
@@ -123,6 +125,27 @@ flowchart TB
     D --导致了--> F
 ```
 
+- 思维导图
+
+```mermaid 
+graph TD
+    A[模块] --> B[模块概述]
+    A --> C[以主程序的形式执行]
+    A --> D[Python中的包]
+    A --> E[自定义模块]
+    A --> F[引用其他模块]
+    B --> B1[什么是模块]
+    B --> B2[为什么使用模块]
+    D --> D1[Python程序的包结构]
+    D --> D2[创建和使用包]
+    E --> E1[创建模块]
+    E --> E2[使用import语句导入模块]
+    E --> E3[使用from...import语句导入模块]
+    E --> E4[模块搜索目录]
+    F --> F1[导入和使用标准模块]
+    F --> F2[第三方模块的下载与安装]
+```
+  
 ## 代码高亮测试
 
 ```python
@@ -186,4 +209,4 @@ import "fmt"
 func main() {
 fmt.Println("Hello, world!")
 }
-​```
+```
